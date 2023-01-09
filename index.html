@@ -89,5 +89,22 @@
 </head>
 <body>
     <h1 style="text-align: center;">Test meta tags</h1>
+    <div>
+        <button 
+            onclick="myFunction()"
+        >
+            Click Me
+        </button>
+    </div>
+
+    <script>
+        function myFunction() {
+            let uri = `sms://&body=Message body`;
+            if (/android/i.test(navigator.userAgent)) {
+                uri = `sms://?body=Message body`
+            }
+            window.open(uri);
+        }
+    </script>
 </body>
 </html>
