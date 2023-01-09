@@ -89,7 +89,7 @@
 </head>
 <body>
     <h1 style="text-align: center;">Test meta tags</h1>
-    <div>
+    <div id="main-div">
         <button 
             onclick="myFunction()"
         >
@@ -99,11 +99,12 @@
 
     <script>
         function myFunction() {
-            let uri = `sms://&body=Message body`;
-            if (/android/i.test(navigator.userAgent)) {
-                uri = `sms://?body=Message body`
+            const ele = document.getElementById("main-div");
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                ele.innerHTML = "This is iOS devices"
+            } else {
+                ele.innerHTML = "This is not iOS devices"
             }
-            window.open(uri);
         }
     </script>
 </body>
