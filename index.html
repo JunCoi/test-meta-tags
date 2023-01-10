@@ -99,13 +99,14 @@
 
     <script>
         function myFunction() {
-            window.location.href =
+            window.open(
                 'fb-messenger://share?link=' +
                 encodeURIComponent( `https://myurl` ) +
                 '&app_id=' +
                 encodeURIComponent( 123123123 ) +
                 '&messag=' +
                 encodeURIComponent("This is the message")
+            );
         }
     </script>
 </body>
