@@ -99,13 +99,6 @@
 
     <script>
         function myFunction() {
-            const ele = document.getElementById("main-div");
-            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-                ele.innerHTML = "This is iOS device"
-            } else {
-                ele.innerHTML = "This is not iOS device"
-            }
-
             window.location.href =
                 'fb-messenger://share?link=' +
                 encodeURIComponent( `https://myurl` ) +
