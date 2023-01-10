@@ -95,7 +95,6 @@
         >
             Click Me
         </button>
-        <a href="fb-messenger://share?link=encodedLink">Open fb-messenger</a>
     </div>
 
     <script>
@@ -106,6 +105,12 @@
             } else {
                 ele.innerHTML = "This is not iOS device"
             }
+
+            window.location.href =
+                'fb-messenger://share?link=' +
+                encodeURIComponent( `https://myurl` ) +
+                '&app_id=' +
+                encodeURIComponent( 123123123 )
         }
     </script>
 </body>
